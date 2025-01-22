@@ -90,7 +90,7 @@ jobs:
            kubectl create secret docker-registry ecrauth \
             --docker-server=${{ secrets.REGISTRY }} \
             --docker-username=AWS \
-            --docker-password=$(aws ecr get-login-password --region <region>)
+            --docker-password="$(aws ecr get-login-password)"
           fi
 
         
