@@ -81,9 +81,6 @@ jobs:
       - name: Get kubeconfig file
         run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
         
-      - name: Print config file
-        run: cat ~/.kube/config
-        
       - name: Check and Create Kubernetes Secret for ECR
         run: |
          if ! kubectl get secret ecrauth; then
