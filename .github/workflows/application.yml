@@ -1,4 +1,4 @@
-name: gitops actions
+name: application- gitops actions workflow
 on: workflow_dispatch
 env:
   AWS_REGION: us-east-2
